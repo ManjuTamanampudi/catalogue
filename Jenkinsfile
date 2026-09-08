@@ -30,8 +30,8 @@ pipeline {
             steps {
                 script {
                     sh """
-                    npm install
-                    echo "Installing dependencies..."
+                        npm install
+                        echo "Installing dependencies..."
                     """
                 }
             }
@@ -40,9 +40,9 @@ pipeline {
             steps {
                  script {
                     sh """
-                    docker build -t manjukarri/catalogue:${appVersion} .
-                     echo "building the docker image..."
-                     """                     
+                        docker build -t manjukarri/catalogue:${appVersion} .
+                        echo "building the docker image..."
+                    """                     
                  }
             }
         }
