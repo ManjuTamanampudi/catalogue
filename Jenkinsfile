@@ -29,7 +29,7 @@ pipeline {
         stage('install dependencies') {
             steps {
                 script {
-                    sh"""
+                    sh """
                     npm install
                     echo "Installing dependencies..."
                     """
@@ -39,11 +39,10 @@ pipeline {
         stage('build image') {
             steps {
                  script {
-                    sh"""
-                    docker build -t manjukarri/catalogue:1.0.0 .
+                    sh """
+                    docker build -t manjukarri/catalogue:${appVersion} .
                      echo "building the docker image..."
-                     """
-                     
+                     """                     
                  }
             }
         }
