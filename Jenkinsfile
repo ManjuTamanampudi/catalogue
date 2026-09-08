@@ -31,8 +31,8 @@ pipeline {
                 script {
                     sh """
                         npm install
-                        echo "Installing dependencies..."
                     """
+                        echo "Installing dependencies..."
                 }
             }
         }
@@ -41,8 +41,8 @@ pipeline {
                  script {
                     sh """
                         docker build -t manjukarri/catalogue:${appVersion} .
-                        echo "building the docker image..."
-                    """                     
+                    """              
+                        echo "building the docker image..."       
                  }
             }
         }
